@@ -1,0 +1,32 @@
+# Github config files
+[includeIf "gitdir:~/codes"]
+    path = ~/codes/.gitconfig
+[includeIf "gitdir:~/go/src/github.com"]
+    path = ~/go/src/github.com/.gitconfig
+[includeIf "gitdir:~/py/src/github.com"]
+    path = ~/py/src/github.com/.gitconfig
+[includeIf "gitdir:~/cpp/src/github.com"]
+    path = ~/cpp/src/github.com/.gitconfig
+[includeIf "gitdir:~/julia/src/github.com"]
+    path = ~/julia/src/github.com/.gitconfig
+
+# Anyon config files
+[includeIf "gitdir:~/go/src/anyonsys.com"]
+    path = ~/go/src/anyonsys.com/.gitconfig
+[includeIf "gitdir:~/py/src/anyonsys.com"]
+    path = ~/py/src/anyonsys.com/.gitconfig
+[includeIf "gitdir:~/cpp/src/anyonsys.com"]
+    path = ~/cpp/src/anyonsys.com/.gitconfig
+
+[init]
+    defaultBranch = main
+
+[alias]
+    cm = commit -m
+    st = status -sb
+    ll = log --graph --oneline --decorate
+    last = log -1 HEAD --stat
+    cc = checkout
+    cb = checkout -b
+    bl = branch --list
+    bd = branch --delete
