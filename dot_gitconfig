@@ -10,6 +10,7 @@
     cb = checkout -b
     bl = branch --list
     bd = branch --delete
+    rs = restore --staged *
 
 # Github config files
 [includeIf "gitdir:~/local/github.com/"]
@@ -24,6 +25,8 @@
     path = ~/.gitconfig-github
 
 # Anyon config files
+[includeIf "gitdir:~/local/anyonsys.com/"]
+    path = ~/.gitconfig-anyonsys
 [includeIf "gitdir:~/go/src/anyonsys.com/"]
     path = ~/.gitconfig-anyonsys
 [includeIf "gitdir:~/py/src/anyonsys.com/"]
