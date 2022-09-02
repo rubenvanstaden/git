@@ -1,36 +1,34 @@
+[user]
+	email = rubenvanstaden@gmail.com
+	name = ruben van staden
+
 [init]
-    defaultBranch = main
+    defaultbranch = main
+
+[color]
+	ui = true
+
+[core]
+	editor = nvim
 
 [alias]
     cm = commit -m
+    ca = commit --amend -m
     st = status -sb
     ll = log --graph --oneline --decorate
-    last = log -1 HEAD --stat
+    last = log -1 head --stat
     cc = checkout
     cb = checkout -b
     bl = branch --list
     bd = branch --delete
     rs = restore --staged *
+	df = diff
+	ds = diff --staged
 
-# Github config files
-[includeIf "gitdir:~/local/github.com/"]
-    path = ~/.gitconfig-github
-[includeIf "gitdir:~/go/src/github.com/"]
-    path = ~/.gitconfig-github
-[includeIf "gitdir:~/py/src/github.com/"]
-    path = ~/.gitconfig-github
-[includeIf "gitdir:~/cpp/src/github.com/"]
-    path = ~/.gitconfig-github
-[includeIf "gitdir:~/julia/src/github.com/"]
+	alias = !git config --get-regexp 'alias.*' | colrm 1 6 | sed 's/[ ]/ = /'
+
+[includeif "gitdir:~/codes/github.com/"]
     path = ~/.gitconfig-github
 
-# Anyon config files
-[includeIf "gitdir:~/local/anyonsys.com/"]
-    path = ~/.gitconfig-anyonsys
-[includeIf "gitdir:~/go/src/anyonsys.com/"]
-    path = ~/.gitconfig-anyonsys
-[includeIf "gitdir:~/py/src/anyonsys.com/"]
-    path = ~/.gitconfig-anyonsys
-[includeIf "gitdir:~/cpp/src/anyonsys.com/"]
-    path = ~/.gitconfig-anyonsys
-
+[includeif "gitdir:~/codes/anyonsys.com/"]
+    path = ~/.gitconfig-anyon
