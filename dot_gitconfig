@@ -1,6 +1,6 @@
 [user]
 	email = rubenvanstaden@gmail.com
-	name = ruben van staden
+	name = Ruben van Staden
 
 [init]
     defaultbranch = main
@@ -13,7 +13,7 @@
 
 [alias]
     cm = commit -m
-    ca = commit --amend -m
+    ca = commit --amend
     st = status -sb
     ll = log --graph --oneline --decorate
     last = log -1 head --stat
@@ -27,8 +27,8 @@
 
 	alias = !git config --get-regexp 'alias.*' | colrm 1 6 | sed 's/[ ]/ = /'
 
-[includeif "gitdir:~/codes/github.com/"]
+[includeif "gitdir:~/github.com/"]
     path = ~/.gitconfig-github
 
-[includeif "gitdir:~/codes/anyonsys.com/"]
+[includeif "gitdir:~/anyonsys.com/"]
     path = ~/.gitconfig-anyon
