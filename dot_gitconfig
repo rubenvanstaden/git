@@ -16,6 +16,7 @@
     ca = commit --amend
     st = status -sb
     ll = log --graph --oneline --decorate
+    rao = remote add origin
     last = log -1 head --stat
     cc = checkout
     cb = checkout -b
@@ -29,6 +30,3 @@
 
 [includeif "gitdir:~/github.com/"]
     path = ~/.gitconfig-github
-
-[includeif "gitdir:~/anyonsys.com/"]
-    path = ~/.gitconfig-anyon
