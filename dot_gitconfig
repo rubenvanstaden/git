@@ -1,5 +1,5 @@
 [user]
-	email = rubenvanstaden@gmail.com
+	email = rvs.cipher@proton.me
 	name = Ruben van Staden
 
 [init]
@@ -23,10 +23,7 @@
     bl = branch --list
     bd = branch --delete
     rs = restore --staged *
-	df = diff
-	ds = diff --staged
+    df = diff
+    ds = diff --staged
 
-	alias = !git config --get-regexp 'alias.*' | colrm 1 6 | sed 's/[ ]/ = /'
-
-[includeif "gitdir:~/github.com/"]
-    path = ~/.gitconfig-github
+    alias = !git config --get-regexp 'alias.*' | colrm 1 6 | sed 's/[ ]/ = /'
